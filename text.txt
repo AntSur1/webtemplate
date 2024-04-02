@@ -2,14 +2,17 @@
 https://www.facebook.com/ekebyvisthuset?locale=sv_SE
 
 
+
 # LANDING
 https://www.w3schools.com/w3css/tryw3css_templates_parallax.htm#contact
 https://www.w3schools.com/w3css/tryw3css_templates_start_page.htm
 
 
+
 # PRISER
 https://handlaprivatkund.ica.se/stores/1003471/products/gel%C3%A9-svartvinb%C3%A4r-425g-ica/2027628
 https://56fd8b92-79aa-49af-ae6f-75aea0cb8869-00-22vh2thygj338.picard.replit.dev/Grunbuns/tool-shop.html
+
 
 
 # KONTAKT
@@ -19,8 +22,17 @@ https://web.archive.org/web/20180508174018/http://www.tradgardshonung.se/kontakt
 
 
 
-
 # INSPIRATION
 https://antsur123.github.io/portfolio/index.html
 https://web.archive.org/web/20180507073501/http://www.tradgardshonung.se/
 https://www.w3schools.com/w3css/w3css_templates.asp
+https://www.smakaroslagen.se/ 
+
+
+
+## ATT GÖRA
+* fixa navbar på telemobil
+* produktsida
+* om oss sida
+* kontakt
+* nyhter
