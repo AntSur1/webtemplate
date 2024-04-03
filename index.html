@@ -1,79 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="style.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <title>Document</title>
 </head>
+
 <body>
 
-    <!-- NAV desktop--->
-    <nav id="desktop">
-      <ul class="nav-links">
-        <li class="nav-item"><a href="#">Logo</a></li>
-        <li class="nav-item">
-          <ul class="sub-menu">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
+  <!-- NAV --->
+  <nav id="nav"></nav>
 
-    <!-- NAV mobile- -->
-    <nav id="mobile">
-      <ul class="nav-links">
-        <ul class="main-menu">
-          <li class="nav-item"><a href="#">Logo</a></li>
-          <li class="nav-item" id="menu-button"><a href="javascript:void(0);" onclick="myFunction()">Hmenu</a></li>
-        </ul>
-        <div id="drop-down-menu" style="display:none">
-          <li class="nav-item">
-            <ul class="sub-menu">
-              <li><a href="#">Page 1</a></li>
-              <li><a href="#">Page 2</a></li>
-              <li><a href="#">Page 3</a></li>
-              <li><a href="#">contact</a></li>
-            </ul>
-          </li>
-        </div>
-      </ul>
-    </nav>
-
-    <!-- sxctopt --->
-    
-    <script>
-      function myFunction() {
-        var x = document.getElementById("drop-down-menu");
-        if (x.style.display === "block") {
-          x.style.display = "none";
-        } else {
-          x.style.display = "block";
-        }
-      }
-      </script>
-    <!-- sxctopt --->
+  <!-- PAGE CONTENT --->
+  <div id="main-content">
 
     <!-- HEADER --->
-    <div class="header center">
-      <h1>START PAGE</h1>
-      <h2>Welcome heom!</h2>
-    </div>
+    <div class="header center" id="header"></div>
 
     <!-- GRID 1--->
     <div class="grid-container grid-container-l">
       <div></div>
-      <div id="1">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+      <div id="container-1"></div>
       <div></div>
     </div>
 
@@ -83,56 +32,24 @@
     <!-- GRID 2--->
     <div class="grid-container grid-container-r">
       <div></div>
-      <div id="2">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+      <div id="container-2"></div>
       <div></div>
     </div>
 
     <!-- GRID 3--->
-    <div class="grid-container grid-container-l" id="3">
+    <div class="grid-container grid-container-l">
       <div></div>
-      <div class="text-div">
-        <h1>Lorem Ipsum</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-  
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-          laboris nisi ut aliquip ex ea commodo consequat.</p>
-      </div>
+      <div id="container-3"></div>
       <div></div>
     </div>
 
     <!-- FOOTER --->
-    <footer class="center">
-      <ul class="footer-container">
-        <li class="footer-item">
-          <h3>Om oss</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum repellendus, omnis ex debitis eligendi vitae excepturi minus quidem? Praesentium vero impedit consequuntur, explicabo est blanditiis quibusdam exercitationem ex doloribus quae?</p>
-        </li>
-        <li class="contact footer-item" >
-          <h3>Kontakt</h3>
-          <ul style="padding: 0;">
-            <li>
-              <a href="#">address</a>
-            </li>
-            <li>
-              <a href="#">tel nr.</a>
-            </li>
-            <li>
-              <a href="#">epost</a>
-            </li>
-            <li>
-              <a href="#">facebook</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </footer>
+    <footer class="center" id="footer"></footer>
+  
+  </div>
+  <!-- SCRIPTS --->
+  
+  <script src="script.js"></script>
 </body>
+
 </html>
