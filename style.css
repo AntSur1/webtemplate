@@ -19,6 +19,12 @@ h1, h2, h3, h4{
   flex-direction: column;
 }
 
+.gray-backgroud {
+  background-color: #f1f1f1;
+}
+
+/* NAV styles */
+
 .nav-item a {
   display: block;
   color: white;
@@ -30,8 +36,6 @@ h1, h2, h3, h4{
 .nav-item a:hover {
   background-color: #111;
 }
-
-/* NAV styles */
 
 #main-content {
   margin-top: 70px;
@@ -61,7 +65,7 @@ h1, h2, h3, h4{
   width: 100%; /* Make it full width */
   overflow: hidden;
 }
-  
+
 .main-menu {
   padding: 0;
   display: flex;
@@ -154,13 +158,17 @@ h1, h2, h3, h4{
   padding: 50px 10px;
 }
 
-.grid-container-l {
+.grid-container-left-3 {
   grid-template-columns: 20% auto 45%;
 }
 
-.grid-container-r {
+.grid-container-right-3 {
   grid-template-columns: 45% auto 20%;
   background-color: #f1f1f1;
+}
+
+.grid-container-center-4 {
+  grid-template-columns: 25% 25% 25% 25%;
 }
 
 @media only screen and (max-width: 768px) {

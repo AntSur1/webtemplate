@@ -63,7 +63,7 @@ function fetchAndInjectSection(section) {
     .then(html => {
       // Inject the retrieved HTML into the document
       document.getElementById(section).innerHTML = html;
-      console.log("loaded " + section);
+      console.debug("loaded " + section);
     })
     .catch(error => console.error("Error loading section:", error));
 }
@@ -75,34 +75,52 @@ function fetchAndInjectContent() {
   const pathName = window.location.pathname;
 
   // Extract the file name from the pathName
-  const fileName = pathName.split("/").pop().replace("html", "json");
-  const path = "content/" + fileName;
+  let fileName = pathName.replace("html", "json");
+
+  // fill content for landingpage on landing page
+  if (fileName == "/"){
+    fileName = "/index.json";
+  }
+
+  const filePath = "content" + fileName;
 
   // Fetch data and create DOM elements from JSON
-  fetchData(path)
-    .then(data => {
-      createElementsFromJSON(data);
-      console.log(data);
-      console.log("loaded "+ path);
-    });
+  const footerPath = "content/footer.json";
 
-  // populate footer
-  const footerPath = "content/footer.json"
-  fetchData(footerPath)
-    .then(data => {
-      createElementsFromJSON(data);
-      console.log("loaded "+ footerPath);
+  [filePath, footerPath].forEach(path => {
+    fetchData(path)
+      .then(data => {
+        createElementsFromJSON(data);
+        console.debug("loaded " + path);
     });
+  });
+}
+
+
+// Load page content
+async function fetchAndPopulateContent() {
+  await Promise.all([
+    fetchAndInjectSection("nav"),
+    fetchAndInjectSection("footer"),
+    fetchAndInjectContent()
+  ]);
+}
+
+
+// Avoid flickering webiste while everything loads
+function showBody() {
+  document.body.removeAttribute("style");
 }
 
 
 // Event listener for DOMContentLoaded event
-document.addEventListener("DOMContentLoaded", function () {
-  fetchAndInjectSection("nav");
-  const fetchBugFix = fetchAndInjectSection("footer");
-
-  fetchBugFix.then(() => {
-    // Navbar fetch is complete, now fetch and inject content
-    fetchAndInjectContent();
-  });
+document.addEventListener("DOMContentLoaded", async function () {
+  try {
+    await fetchAndPopulateContent();
+    showBody();
+  } 
+  catch (error) {
+    console.error("An error occurred:", error, ", trying again");
+  }
 });
+

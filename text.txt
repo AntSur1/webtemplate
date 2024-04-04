@@ -31,7 +31,6 @@ https://www.smakaroslagen.se/
 
 
 ## ATT GÖRA
-* fixa navbar på telemobil
 * produktsida
 * om oss sida
 * kontakt
