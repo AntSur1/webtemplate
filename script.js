@@ -71,11 +71,9 @@ function fetchAndInjectSection(section) {
 
 // Function to fetch data and create DOM elements from JSON
 function fetchAndInjectContent() {
-  // Get the pathName of the current URL
   const pathName = window.location.pathname;
 
-  // Extract the file name from the pathName
-  let fileName = pathName.replace("html", "json");
+  const fileName = pathName.replace("html", "json");
 
   // fill content for landingpage on landing page
   if (fileName == "/"){
@@ -84,15 +82,10 @@ function fetchAndInjectContent() {
 
   const filePath = "content" + fileName;
 
-  // Fetch data and create DOM elements from JSON
-  const footerPath = "content/footer.json";
-
-  [filePath, footerPath].forEach(path => {
-    fetchData(path)
-      .then(data => {
-        createElementsFromJSON(data);
-        console.debug("loaded " + path);
-    });
+  fetchData(filePath)
+  .then(data => {
+    createElementsFromJSON(data);
+    console.debug("loaded " + filePath);
   });
 }
 

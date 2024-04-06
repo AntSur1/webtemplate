@@ -23,8 +23,12 @@ h1, h2, h3, h4{
   background-color: #f1f1f1;
 }
 
-/* NAV styles */
+/* Root variables */
+:root {
+  /* --text-page-width: 150px; */
+}
 
+/* NAV styles */
 .nav-item a {
   display: block;
   color: white;
@@ -117,18 +121,31 @@ h1, h2, h3, h4{
   }
 }
 
-/* NAV end*/
 /* HEADER styles*/
-
 .header {
-  padding: 128px 16px;
+  padding: 128px 0;
   background-color: tomato;
   color: white;
 }
 
-/* HEADER end*/
-/* parallax stytles*/
+/* BANNER styles */
+.banner {
+  background-color: tomato;
+  color: white;
+}
 
+/* PRODUCTS */
+.product {
+  display: inline-flex;
+  background-color: red;
+  margin: 20px;
+}
+
+.product h4{
+  margin: 0;
+}
+
+/* parallax stytles*/
 .parallax {
   /* The image used */
   background-color: black;
@@ -150,9 +167,7 @@ h1, h2, h3, h4{
   }
 }
 
-/* parallax end*/
 /* Grid styles*/
-
 .grid-container {
   display: grid;
   padding: 50px 10px;
@@ -177,9 +192,7 @@ h1, h2, h3, h4{
   }
 }
 
-/* Grid end*/
 /* footer styles*/
-
 #footer {
   color: #dee6f2;
   background-color: #1d2331;
@@ -209,5 +222,3 @@ footer a{
 footer h3 {
   font-weight: 600;
 }
-
-/* footer end*/
