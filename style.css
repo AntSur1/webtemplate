@@ -1,3 +1,15 @@
+/* Root variables */
+:root {
+  --primary-background-color: white;
+  --secondary-background-color:#f1f1f1;
+  --navbar-color: linear-gradient(90deg, #0b383e, #196e71);
+  --navbar-hover-color: #111;
+  --secondary-color: tomato;
+  --footer-color: #1d2331;
+  --footer-text-color: #dee6f2;
+  --primary-text-color: white;
+}
+
 /* General utils*/
 body {
   font-family: "Segoe UI", Arial, sans-serif;
@@ -20,25 +32,20 @@ h1, h2, h3, h4{
 }
 
 .gray-backgroud {
-  background-color: #f1f1f1;
-}
-
-/* Root variables */
-:root {
-  /* --text-page-width: 150px; */
+  background-color: var(--secondary-background-color);
 }
 
 /* NAV styles */
 .nav-item a {
   display: block;
-  color: white;
+  color: var(--primary-background-color);
   text-align: center;
   text-decoration: none;
   padding: 27px 32px;
 }
 
 .nav-item a:hover {
-  background-color: #111;
+  background-color: var(--navbar-hover-color);
 }
 
 #main-content {
@@ -46,7 +53,7 @@ h1, h2, h3, h4{
 }
 
 .nav-links {
-  background: linear-gradient(90deg, #0b383e, #196e71);
+  background: var(--navbar-color);
   list-style-type: none;
   margin: 0;
   display: flex;
@@ -78,7 +85,7 @@ h1, h2, h3, h4{
 }
 
 /* DESKTOP */
-@media only screen and (min-width: 830px) {
+@media only screen and (min-width: 840px) {
   #mobile {
     display: none;
   }
@@ -102,7 +109,7 @@ h1, h2, h3, h4{
 }
 
 /* MOBILE */
-@media only screen and (max-width: 830px) {
+@media only screen and (max-width: 840px) {
   #mobile {
     display: flex;
     position: fixed;
@@ -124,35 +131,67 @@ h1, h2, h3, h4{
 /* HEADER styles*/
 .header {
   padding: 128px 0;
-  background-color: tomato;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--primary-background-color);
 }
 
 /* BANNER styles */
 .banner {
-  background-color: tomato;
-  color: white;
+  background-color: var(--secondary-color);
+  color: var(--primary-text-color);
 }
 
 /* PRODUCTS */
+#products {
+  background-color: var(--secondary-background-color);
+}
+
 .product {
   display: inline-flex;
-  background-color: red;
+  flex-direction: column;
   margin: 20px;
+  width: 240px;
+  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain ;
 }
 
 .product h4{
   margin: 0;
 }
 
+.product-container {
+  object-fit: cover;
+  height: 50%;
+  padding: 10px;
+}
+
+.image-container {
+  height: 200px;
+}
+
+.info-container {
+  border-top: 1px solid #000;
+}
+
+.button-container button{
+  width: 100%;
+  height: 50%;
+  bottom: 0;
+}
+
 /* parallax stytles*/
 .parallax {
   /* The image used */
-  background-color: black;
-  background-image: url("images/image.png");
+  background-image: url("images/parallax.png");
 
   /* Full height */
-  height: 300px;
+  height: 350px;
   width: 100%;
 
   /* Create the parallax scrolling effect */
@@ -179,7 +218,7 @@ h1, h2, h3, h4{
 
 .grid-container-right-3 {
   grid-template-columns: 45% auto 20%;
-  background-color: #f1f1f1;
+  background-color: var(--secondary-background-color);
 }
 
 .grid-container-center-4 {
@@ -194,9 +233,9 @@ h1, h2, h3, h4{
 
 /* footer styles*/
 #footer {
-  color: #dee6f2;
-  background-color: #1d2331;
-  padding: 30px; /*25*/
+  color: var(--footer-text-color);
+  background-color: var(--footer-color);
+  padding: 30px;
 }
 
 @media screen and (min-width: 768px) {

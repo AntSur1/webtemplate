@@ -1,5 +1,11 @@
 [
   {
+    "id":"banner",
+    "data": {
+      "h1": "About"
+    }
+  },
+  {
     "id": "exampleTaag",
     "data": {
       "h1": "Heading",

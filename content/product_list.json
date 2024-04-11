@@ -1,0 +1,42 @@
+[
+  {
+    "image":  "banana.png",
+    "name":   "Banana",
+    "info":   "A yellow fruit"
+  },
+  {
+    "image":  "apple.png",
+    "name":   "Apple",
+    "info":   "A red fruit"
+  },
+  {
+    "image":  "orange.png",
+    "name":   "Orange",
+    "info":   "A round citrus fruit"
+  },
+  {
+    "image":  "strawberry.png",
+    "name":   "Strawberry",
+    "info":   "A small red fruit"
+  },
+  {
+    "image":  "grape.png",
+    "name":   "Grape",
+    "info":   "A small round fruit"
+  },
+  {
+    "image":  "watermelon.png",
+    "name":   "Watermelon",
+    "info":   "A large juicy fruit"
+  },
+  {
+    "image":  "kiwi.png",
+    "name":   "Kiwi",
+    "info":   "A small brown fruith"
+  },
+  {
+    "image":  "pineapple.png",
+    "name":   "Pineapple",
+    "info":   "A tropical fruit"
+  }
+]

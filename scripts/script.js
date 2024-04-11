@@ -9,6 +9,22 @@ function dropDownMenu() {
 }
 
 
+// Change title
+function setTitle(){
+  const url = window.location.href;
+
+  const filename = url.substring(url.lastIndexOf('/') + 1);
+
+  const pageTitle = filename.split('.').slice(0, -1).join('.');
+
+  if (pageTitle != "index") {
+    const finalTitle = pageTitle.charAt(0).toLocaleUpperCase() + pageTitle.slice(1);
+      
+    document.title = `${finalTitle} - Template`;
+  }
+
+}
+
 // Function to fetch data from the provided URL
 function fetchData(url) {
   return fetch(url)
@@ -117,3 +133,4 @@ document.addEventListener("DOMContentLoaded", async function () {
   }
 });
 
+setTitle();
